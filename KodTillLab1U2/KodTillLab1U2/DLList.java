@@ -252,16 +252,25 @@ public class DLList {
 			current = current.next;
 			current.imp = importanceOfP(current.prev.p, current.p, current.next.p);
 		}
+		current = head;
+		for (int i = 0; i < size; i++) {
+			q.remove(current);
+			q.add(current);
+			current = current.next;
+		}
 		// Assume there are at least 3 nodes otherwise it's all meaningless.
 		// now reduce the list to the k most important nodes
-		System.out.println(q.size());
 		while (q.size() > k) {
 			current = q.poll();
 			current.prev.next = current.next;
 			current.next.prev = current.prev;
 			size--;
 			current.prev.imp = importanceOfP(current.prev.prev.p, current.prev.p, current.next.p);
+			q.remove(current.prev);
+			q.add(current.prev);
 			current.next.imp = importanceOfP(current.prev.p, current.next.p, current.next.next.p);
+			q.remove(current.next);
+			q.add(current.next);
 			System.out.println(q.size());
 		}
 		// recalculate importance for rem.next, neighbour to the right
