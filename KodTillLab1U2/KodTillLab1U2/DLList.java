@@ -218,21 +218,20 @@ public class DLList {
 	 * @throws NullPointerException if p==null
 	 */
 	public void addLast(Point p) {
-		// TODO
 		if (p == null) {
 			throw new NullPointerException();
 		}
-		Node n = new Node(p, size); // Creares new node at the end of the list with the point
+		Node node = new Node(p, size);
 		if (tail != null) {
-			tail.next = n; // Sets the previous tail's next node to the new end
+			tail.next = node;
+			node.prev = tail;
 		}
 		if (head == null) {
-			head = n;
+			head = node;
 		}
-		n.prev = tail;
-		tail = n;
-		q.add(n);
 		size++;
+		tail = node;
+		q.add(node);
 	} // end addLast
 		// ============================================================
 
@@ -251,26 +250,18 @@ public class DLList {
 		for (int i = 0; i < size - 2; i++) {
 			current = current.next;
 			current.imp = importanceOfP(current.prev.p, current.p, current.next.p);
-		}
-		current = head;
-		for (int i = 0; i < size; i++) {
-			q.remove(current);
-			q.add(current);
-			current = current.next;
-		}
-		// Assume there are at least 3 nodes otherwise it's all meaningless.
+		} // Assume there are at least 3 nodes otherwise it's all meaningless.
 		// now reduce the list to the k most important nodes
 		while (q.size() > k) {
+			System.out.println("asd");
+			q.offer(q.poll()); // Reorders list
 			current = q.poll();
 			current.prev.next = current.next;
 			current.next.prev = current.prev;
 			size--;
+			System.out.println(current.imp);
 			current.prev.imp = importanceOfP(current.prev.prev.p, current.prev.p, current.next.p);
-			q.remove(current.prev);
-			q.add(current.prev);
 			current.next.imp = importanceOfP(current.prev.p, current.next.p, current.next.next.p);
-			q.remove(current.next);
-			q.add(current.next);
 			System.out.println(q.size());
 		}
 		// recalculate importance for rem.next, neighbour to the right
