@@ -1,6 +1,7 @@
 import java.util.PriorityQueue;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.util.Comparator;
 import java.util.Iterator;
 //import java.io.FileNotFoundException;
 import java.awt.Point;
@@ -230,38 +231,41 @@ public class DLList {
 		}
 		n.prev = tail;
 		tail = n;
+		q.add(n);
 		size++;
 	} // end addLast
 		// ============================================================
 
 	/**
-	* Reduces the list to the sought-after k most important points.
-	* @param k the number of remaining points
-	* @throws NoSuchElementException if the priority queue becomes empty
-	*/
+	 * Reduces the list to the sought-after k most important points.
+	 * 
+	 * @param k the number of remaining points
+	 * @throws NoSuchElementException if the priority queue becomes empty
+	 */
 	public void reduceListToKElements(int k) {
 		// TODO
 		Node current = head;
+		head.imp = infinity;
+		tail.imp = infinity;
 		// Calculates the initial important measure for all nodes.
-		PriorityQueue <Node> qk = new PriorityQueue<Node>(k,current.compareTo(n));
-		for (int i = 0; i < size-2; i++){ 			// Do for all elements except first and last
+		for (int i = 0; i < size - 2; i++) {
 			current = current.next;
-			double importance = importanceOfP(current.prev.p, current.p, current.next.p);
-			current.imp = importance;
-			if (qk.size() < k) {
-				qk.add(current);
-			} else if (qk.peek().imp < importance) {
-				qk.poll();
-				qk.add(current);
-			}
+			current.imp = importanceOfP(current.prev.p, current.p, current.next.p);
 		}
-		q = qk;
-		for (int i = 0 )
 		// Assume there are at least 3 nodes otherwise it's all meaningless.
 		// now reduce the list to the k most important nodes
-		
-			// recalculate importance for rem.next, neighbour to the right
-			// and rem.prev, neighbour to the left
+		System.out.println(q.size());
+		while (q.size() > k) {
+			current = q.poll();
+			current.prev.next = current.next;
+			current.next.prev = current.prev;
+			size--;
+			current.prev.imp = importanceOfP(current.prev.prev.p, current.prev.p, current.next.p);
+			current.next.imp = importanceOfP(current.prev.p, current.next.p, current.next.next.p);
+			System.out.println(q.size());
+		}
+		// recalculate importance for rem.next, neighbour to the right
+		// and rem.prev, neighbour to the left
 
 	}
 
