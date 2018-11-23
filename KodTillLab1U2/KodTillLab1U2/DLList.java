@@ -224,13 +224,13 @@ public class DLList {
 		Node node = new Node(p, size);
 		if (tail != null) {
 			tail.next = node;
-			node.prev = tail;
 		}
 		if (head == null) {
 			head = node;
 		}
-		size++;
+		node.prev = tail;
 		tail = node;
+		size++;
 		q.add(node);
 	} // end addLast
 		// ============================================================
@@ -247,11 +247,11 @@ public class DLList {
 		head.imp = infinity;
 		tail.imp = infinity;
 		// Calculates the initial important measure for all nodes.
-		for (int i = 0; i < size - 2; i++) {
+		for (int i = 1; i < size - 1; i++) {
 			current = current.next;
 			current.imp = importanceOfP(current.prev.p, current.p, current.next.p);
 		} // Assume there are at least 3 nodes otherwise it's all meaningless.
-		// now reduce the list to the k most important nodes
+			// now reduce the list to the k most important nodes
 		while (q.size() > k) {
 			System.out.println("asd");
 			q.offer(q.poll()); // Reorders list
