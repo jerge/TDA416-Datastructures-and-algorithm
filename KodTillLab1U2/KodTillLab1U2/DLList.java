@@ -222,16 +222,22 @@ public class DLList {
 			throw new NullPointerException();
 		}
 		Node node = new Node(p, size);
-		if (tail != null) {
-			tail.next = node;
-		}
-		if (head == null) {
+		if (tail == null) {
 			head = node;
+			tail = node;
+			node.imp = infinity;
+		} else {
+			if (tail.prev != null) {
+				tail.imp = importanceOfP(tail.prev.p, tail.p, node.p);
+				q.remove(tail);
+				q.add(tail);
+			}
+			tail.next = node;
+			node.prev = tail;
 		}
-		node.prev = tail;
 		tail = node;
-		size++;
 		q.add(node);
+		size++;
 	} // end addLast
 		// ============================================================
 
@@ -247,22 +253,28 @@ public class DLList {
 		head.imp = infinity;
 		tail.imp = infinity;
 		// Calculates the initial important measure for all nodes.
-		for (int i = 1; i < size - 1; i++) {
-			current = current.next;
-			current.imp = importanceOfP(current.prev.p, current.p, current.next.p);
-		} // Assume there are at least 3 nodes otherwise it's all meaningless.
-			// now reduce the list to the k most important nodes
+		// Assume there are at least 3 nodes otherwise it's all meaningless.
+		// now reduce the list to the k most important nodes
+
 		while (q.size() > k) {
-			System.out.println("asd");
-			q.offer(q.poll()); // Reorders list
-			current = q.poll();
-			current.prev.next = current.next;
-			current.next.prev = current.prev;
-			size--;
-			System.out.println(current.imp);
-			current.prev.imp = importanceOfP(current.prev.prev.p, current.prev.p, current.next.p);
-			current.next.imp = importanceOfP(current.prev.p, current.next.p, current.next.next.p);
-			System.out.println(q.size());
+			Node nodeL = q.peek().prev;
+			Node nodeR = q.peek().next;
+
+			q.poll();
+
+			nodeL.next = nodeR;
+			nodeR.prev = nodeL;
+
+			if (nodeL.prev != null) {
+				nodeL.imp = importanceOfP(nodeL.prev.p, nodeL.p, nodeL.next.p);
+				q.remove(nodeL);
+				q.add(nodeL);
+			}
+			if (nodeR.next != null) {
+				nodeR.imp = importanceOfP(nodeR.prev.p, nodeR.p, nodeR.next.p);
+				q.remove(nodeR);
+				q.add(nodeR);
+			}
 		}
 		// recalculate importance for rem.next, neighbour to the right
 		// and rem.prev, neighbour to the left
