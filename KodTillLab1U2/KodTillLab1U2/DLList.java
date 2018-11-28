@@ -248,37 +248,29 @@ public class DLList {
 	 * @throws NoSuchElementException if the priority queue becomes empty
 	 */
 	public void reduceListToKElements(int k) {
-		// TODO
 		Node current = head;
-		head.imp = infinity;
-		tail.imp = infinity;
-		// Calculates the initial important measure for all nodes.
-		// Assume there are at least 3 nodes otherwise it's all meaningless.
-		// now reduce the list to the k most important nodes
 
-		while (q.size() > k) {
-			Node nodeL = q.peek().prev;
-			Node nodeR = q.peek().next;
+		while (size > k) { // n-k times do
+			Node nodeL = q.peek().prev; // 1 op
+			Node nodeR = q.peek().next; // 1 op
 
-			q.poll();
+			q.poll(); // logn op
+			size--;
 
 			nodeL.next = nodeR;
 			nodeR.prev = nodeL;
 
 			if (nodeL.prev != null) {
 				nodeL.imp = importanceOfP(nodeL.prev.p, nodeL.p, nodeL.next.p);
-				q.remove(nodeL);
-				q.add(nodeL);
+				q.remove(nodeL); // n op
+				q.add(nodeL); // logn op
 			}
 			if (nodeR.next != null) {
 				nodeR.imp = importanceOfP(nodeR.prev.p, nodeR.p, nodeR.next.p);
-				q.remove(nodeR);
-				q.add(nodeR);
+				q.remove(nodeR); // n op
+				q.add(nodeR); // logn op
 			}
 		}
-		// recalculate importance for rem.next, neighbour to the right
-		// and rem.prev, neighbour to the left
-
 	}
 
 }
