@@ -78,8 +78,11 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     z.parent = x;
   } // doubleRotateLeft
   // ========== ========== ========== ==========
-  /*
-   * zagzagga a c / \ / \ b g --> d b / \ / \ c f e a / \ / \ d e f g
+
+  /**
+   * zagzagga
+   * 
+   * @param a the root of the rotation
    */
 
   private void zagzag(Entry a) {
@@ -108,6 +111,11 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     b.right = c;
   }
 
+  /**
+   * zigzigga
+   * 
+   * @param a the root of the rotation
+   */
   private void zigzig(Entry a) {
     Entry b = a.right;
     Entry c = a.right.right;
@@ -134,6 +142,16 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     b.left = c;
   }
 
+  /**
+   * Find the first occurence of an element in the collection that is equal to the
+   * argument <tt>e</tt> with respect to its natural order. I.e.
+   * <tt>e.compareTo(element)</tt> is 0. Also splays the tree
+   * 
+   * @param e The dummy element to compare to.
+   * @return An element <tt>e'</tt> in the collection satisfying
+   *         <tt>e.compareTo(e') == 0</tt>. If no element is found, <tt>null</tt>
+   *         is returned
+   */
   @Override
   public E get(E element) {
     Entry e = find(element, root);
@@ -142,6 +160,9 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     return e.element;
   }
 
+  /**
+   * helper function for get
+   */
   @Override
   public Entry find(E element, Entry target) {
     if (target == null || element == null) {
@@ -167,6 +188,11 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     }
   }
 
+  /**
+   * Splays the given entry to the top of the tree
+   * 
+   * @param target the target to splay to the top
+   */
   private void splay(Entry target) {
     if (target == null)
       return;
@@ -192,6 +218,11 @@ public class SplayWithGet<E extends Comparable<? super E>> extends BinarySearchT
     }
   }
 
+  /**
+   * Just for testing
+   * 
+   * @param args
+   */
   public static void main(String[] args) {
     SplayWithGet<Integer> st = new SplayWithGet<Integer>();
     st.add(100);
