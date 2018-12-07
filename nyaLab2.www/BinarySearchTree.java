@@ -21,10 +21,10 @@ public String toString() {
 	boolean preorder = true;	// true => preorder, see below
 								// false => bfs order, see below
 								// see documentation below
-	// leftBalance and debug only work on bfs 
+	// leftBalance and debug only work on bfs
 	// leftbalance and debug is a good combination
 	// !leftbalance and !debug is a good combination
-	boolean leftBalance = false;	
+	boolean leftBalance = false;
 		// true => each row of the tree start to the left,
 		// use for big trees and if tree content is long like a list
 		// false => root in the middle, max depth 5-6 or so
@@ -35,7 +35,7 @@ public String toString() {
 
 /*
 preOrder Traverse returns the tree in the form:
-100 : 
+100 :
    50 : 100
    |  25 : 50
    |  |  10 : 25
@@ -52,7 +52,7 @@ bfs Traverse returns the tree as a bredth first search with different formats.
 
 **** one liner är borkommenterad i koden
 one liner: the first two number is the nodes position in the tree (depth, width)
-	<1+1+100>  <2+1+50>  <2+2+150>  <3+1+25>  <3+3+125>  <3+4+175>  <4+5+120> 
+	<1+1+100>  <2+1+50>  <2+2+150>  <3+1+25>  <3+3+125>  <3+4+175>  <4+5+120>
 *** leftbalance and !debug:
 	< 100>
 	<  50> < 150>
@@ -62,10 +62,10 @@ one liner: the first two number is the nodes position in the tree (depth, width)
 	< 2+ 1+  50> < 2+ 2+ 150>
 	< 3+ 1+  25> < 3+ 2+null> < 3+ 3+ 125> < 3+ 4+ 175>
 *** !leftbalance and !debug (only content but structured as a tree)
-                                         < 100> 
-              <  50>                                                  < 150> 
-<  25>                        --                        < 125>                      < 175> 
-		
+                                         < 100>
+              <  50>                                                  < 150>
+<  25>                        --                        < 125>                      < 175>
+
 */
 
 
@@ -74,7 +74,7 @@ import java.util.*;
 /**
  *  A simple binary searchtree ordered by the
  *  method compareTo for the elements.
- * @author (Bror Bjerner) 
+ * @author (Bror Bjerner)
  * @version (2010)
  * @author EH
  * @version (2018) toString, preorder traversal, bf traversal
@@ -97,21 +97,21 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 		public Entry  left, right, parent;
 
 		public Entry( E element,
-					  Entry  left, 
+					  Entry  left,
 					  Entry  right,
 					  Entry  parent ) {
 
-			this.element = element; 
-			this.left    = left; 
-			this.right   = right; 
-			this.parent  = parent; 
+			this.element = element;
+			this.left    = left;
+			this.right   = right;
+			this.parent  = parent;
 
 		} //  constructor Entry
 
 		public  Entry( E element, Entry parent) {
 			this( element, null, null, parent );
 		} //  constructor Entry
-		
+
 		//@Override
 		public String toString() {
 			//return element.toString();
@@ -122,7 +122,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 				return String.valueOf(element);
 			}
 		}
-		
+
 		/*
 		//@Override
 		public String toString() {
@@ -143,7 +143,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	// ========== ========== ========== ==========
 	/**
 	* The number of objects in this collection.
-	* @return the number of elements in the tree. 
+	* @return the number of elements in the tree.
 	*/
 	public int size() {
 		return size;
@@ -172,7 +172,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	// ========== ========== ========== ==========
 	/**
 	* Add the element into the three at first proper empty place
-	* @param o the element to be included  
+	* @param o the element to be included
 	* @returns true if the element is in included in the tree.
 	*/
 	public boolean add( E elem ) {
@@ -182,10 +182,10 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 			addIn( elem, root );
 		}
 		size++;
-		return true; 
+		return true;
 	} // add
 	// ========== ========== ========== ==========
-	
+
 	protected Entry find( E elem, Entry t ) {
 		if ( t == null )
 			return null;
@@ -195,7 +195,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 				return find( elem, t.left );
 			else if ( jfr > 0 )
 				return find( elem, t.right );
-			else 
+			else
 				return t;
 		}
 	}  //   find
@@ -205,24 +205,24 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	* Check if the element is in the the tree.
 	* @param elem The element to check
 	* @returns true if the element is contained in the tree,
-	*          otherwise false is returned.  
-	*/ 
+	*          otherwise false is returned.
+	*/
 	public boolean contains( E elem ) {
 		return find( elem, root ) != null;
-	}  // contains 
+	}  // contains
 	// ========== ========== ========== ==========
 	/**
 	* Removes all of the elements from this tree
-	*/ 
+	*/
 	public void clear() {
 		root = null;
-		size = 0;   
+		size = 0;
 	}   //  clear
 	// ========== ========== ========== ==========
 	/*    protected Entry findRefToMostRight( Entry t ) {
 		if ( t.right == null )
 		return t;
-		else 
+		else
 		return findRefToMostRight( t.right );
 		}  //   findRefToMostRight
 
@@ -249,12 +249,12 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	protected void liftRightSubtree( Entry t ) {
 		// Note that l.left is null
 		if ( t.right != null )
-			t.right.parent = t.parent; 
+			t.right.parent = t.parent;
 		if ( t.parent == null )
 			root = t.right;
 		else if ( t.parent.left == t )
 			t.parent.left = t.right;
-		else 
+		else
 			t.parent.right = t.right;
 	} // liftRightSubtree
 	// ========== ========== ========== ==========
@@ -308,9 +308,9 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	*/
 	// ========== ========== ========== ==========
 	/**
-	* Remove the first occurance of an element for which 
-	* compareTo with the argument yields 0. If no element 
-	* is removed false is returned, otherwise true.  
+	* Remove the first occurance of an element for which
+	* compareTo with the argument yields 0. If no element
+	* is removed false is returned, otherwise true.
 	* @param elem element of Comarable
 	* @return true if the tree has changed, otherwise false.
 	*/
@@ -340,7 +340,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 		return null;
 	}  //  iterator
 	// ========== ========== ========== ==========
-	// An inner class to create an iterator for 
+	// An inner class to create an iterator for
 	// the collection of elements in preorder.
 	protected class BSTPre_Iterator implements Iterator<E> {
 		private Stacks<Entry> nextOnTop  = new LinkedStack<Entry>();
@@ -348,8 +348,8 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 
 		protected BSTPre_Iterator() {
 			for ( Entry p = root; p != null; p = p.left )
-				nextOnTop.push( p ); 
-		} // constructor BST_Iterator 
+				nextOnTop.push( p );
+		} // constructor BST_Iterator
 
 		public boolean hasNext() {
 			return ! nextOnTop.isEmpty();
@@ -367,9 +367,9 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 			if ( lastNext != null ) {
 				removeThis( lastNext );
 				lastNext = null;
-			} 
+			}
 			else
-				throw new IllegalStateException();    
+				throw new IllegalStateException();
 		} // remove
 	}  //  classBST_Iterator
 
@@ -413,16 +413,16 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 		// ========= ========= ========= ========= ========= =========
 		// ************ ADJUST to your preferences ************
 		// a state variable that determine what kind of printout is returned
-		boolean simple = true; 		// true => style is [ 1 2 3 4 5 6 ]
+		boolean simple = false; 		// true => style is [ 1 2 3 4 5 6 ]
 									// i.e. only content in preorder, no shape
 									// false => trye value of preorder
-		boolean preorder = true;	// true => preorder, 
+		boolean preorder = true;	// true => preorder,
 									// false => bfs order
 									// see documentation below
-		// leftBalance and debug only work on bfs 
+		// leftBalance and debug only work on bfs
 		// leftbalance and debug is a good combination
 		// !leftbalance and !debug is a good combination
-		boolean leftBalance = false;	
+		boolean leftBalance = false;
 			// true => each row of the tree start to the left,
 			// use for big trees and if tree content is long like a list
 			// false => root in the middle, max depth 5-6 or so
@@ -458,7 +458,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	}
 	/*
 	preOrderTraverse returns the tree in the form:
-	100 : 
+	100 :
 	   50 : 100
 	   |  25 : 50
 	   |  |  10 : 25
@@ -494,14 +494,14 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	}
 
 	// This is a class for queueing elements used in bfsTraverse.
-	// It contains an Entry and at what depth and what position sideways 
+	// It contains an Entry and at what depth and what position sideways
 	// that a node is in the tree. Also a toString method that can hanle that Entry is null
 	private class QElem {
 		public int depth = 0;
 		public int width = 0;
 		public Entry entry = null;
 		boolean debug = false;
-		
+
 		protected QElem (int depth, int width, Entry e, boolean debug) {
 			this.depth = depth;
 			this.width = width;
@@ -522,10 +522,10 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 
 	/*
 	bfsTraverse returns the tree as a bredth first search with different formats.
-		
+
 	**** one liner är borkommenterad i koden
 	one liner: the first two number is the nodes position in the tree (depth, wodth)
-		<1+1+100>  <2+1+50>  <2+2+150>  <3+1+25>  <3+3+125>  <3+4+175>  <4+5+120> 
+		<1+1+100>  <2+1+50>  <2+2+150>  <3+1+25>  <3+3+125>  <3+4+175>  <4+5+120>
 	*** leftbalance and !debug:
 		< 100>
 		<  50> < 150>
@@ -535,10 +535,10 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 		< 2+ 1+  50> < 2+ 2+ 150>
 		< 3+ 1+  25> < 3+ 2+null> < 3+ 3+ 125> < 3+ 4+ 175>
 	*** !leftbalance and !debug
-                                         < 100> 
-              <  50>                                                  < 150> 
-<  25>                        --                        < 125>                      < 175> 
-		
+                                         < 100>
+              <  50>                                                  < 150>
+<  25>                        --                        < 125>                      < 175>
+
 	*/
 	private void bfsTraverse(Entry entry, StringBuilder sb, boolean leftBalance, boolean debug ){
 		int maxDepth = 0;
@@ -588,7 +588,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 					// messy is just the first name ....
 					space6 = (row==maxDepth-1)?"":"      ";
 					space13 = "             ";
-				} 
+				}
 				String space = "";
 				String ispace = "";
 				// calculate first indent
@@ -635,9 +635,9 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 			System.out.print(it.next() + " ");
 		}
 		System.out.println();
-		
-		/*
-		SplayTreeWithGet<Integer> st = new SplayTreeWithGet<Integer>();
+
+
+	/*	SplayTreeWithGet<Integer> st = new SplayTreeWithGet<Integer>();
 		st.add(100);
 		st.add(50);
 		st.add(150);
@@ -658,15 +658,15 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 		st.add(130);
 		st.add(160);
 		st.add(180);
-		
+
 		System.out.println("Tree before:");
 		System.out.println(st);
-	
+
 		st.get(75);
-	
+
 		System.out.println("Tree after get(75)");
 		System.out.println(st);
 		*/
 	} // end main
-	
+
 }  //  class BinarySearchTree
