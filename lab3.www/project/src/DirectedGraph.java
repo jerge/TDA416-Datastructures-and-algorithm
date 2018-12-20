@@ -62,14 +62,14 @@ public class DirectedGraph<E extends Edge> {
      * @return null
      */
     public Iterator<E> shortestPath(int from, int to) {
-        PriorityQueue<CompDijkstraPath> paths = new PriorityQueue<>();
-        paths.add(new CompDijkstraPath(from,0,new ArrayList<>()));
+        PriorityQueue<CompDijkstraPath> dijkstraPaths = new PriorityQueue<>();
+        dijkstraPaths.add(new CompDijkstraPath(from,0,new ArrayList<>()));
 
         List<Integer> visited = new ArrayList<>();
 
-        while (!paths.isEmpty()) {
+        while (!dijkstraPaths.isEmpty()) {
 
-            CompDijkstraPath currentElement = paths.poll();
+            CompDijkstraPath currentElement = dijkstraPaths.poll();
             int node = currentElement.current;
 
             if (!visited.contains(node)) {
@@ -79,9 +79,9 @@ public class DirectedGraph<E extends Edge> {
                 visited.add(node);
                 for (E edge : this.paths.get(node)) {
                     if (!visited.contains(edge.getDest())) {
-                        List<E> eList = new ArrayList<>();
+                        List<E> eList = new ArrayList<>(currentElement.path);
                         eList.add(edge);
-                        paths.add(new CompDijkstraPath(edge.getDest(), currentElement.cost+edge.getWeight(),eList));
+                        dijkstraPaths.add(new CompDijkstraPath(edge.getDest(), currentElement.cost+edge.getWeight(),eList));
                     }
 
                 }
