@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d010524a-a9f5-4e70-b36d-0f2d536e258b" name="Default" comment="" />
+    <list default="true" id="6b98e0ab-43e2-4351-ae4b-24ca29b6f000" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,113 +22,8 @@
       <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/src/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="106" column="21" lean-forward="true" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
-              <folding>
-                <element signature="e#322#323#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
-                <element signature="e#1518#1519#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BusEdge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/BusEdge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Double.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/Double.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="153" column="22" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
-              <folding>
-                <marker date="1539800322000" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1539800322000" expanded="false" signature="1009:1020" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="1068:1074" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="1126:2075" ph="{...}" />
-                <marker date="1539800322000" expanded="true" signature="2152:2205" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="2252:2263" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="2287:2293" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="2374:2431" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="2477:2488" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="2508:2514" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="2566:2631" ph="{...}" />
-                <marker date="1539800322000" expanded="true" signature="2681:2746" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="2778:2789" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="2807:2813" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="2875:2922" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="2950:2961" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="2986:2992" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3025:3036" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3066:3072" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3102:3113" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3141:3147" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3176:3187" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3218:3224" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3255:3266" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3298:3304" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3331:3342" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3365:3371" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3400:3411" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3435:3441" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3472:3483" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3508:3514" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3547:3558" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3576:3582" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="3609:3620" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="3648:3654" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="3700:3793" ph="{...}" />
-                <marker date="1539800322000" expanded="true" signature="3834:3954" ph="{...}" />
-                <marker date="1539800322000" expanded="true" signature="4009:4241" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="4407:4418" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="4457:4463" ph=" }" />
-                <marker date="1539800322000" expanded="true" signature="4521:4819" ph="{...}" />
-                <marker date="1539800322000" expanded="false" signature="4875:4886" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="4905:4911" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="4967:4978" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="5006:5012" ph=" }" />
-                <marker date="1539800322000" expanded="false" signature="5068:5079" ph=" { " />
-                <marker date="1539800322000" expanded="false" signature="5107:5113" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/NodeObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/Edge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DrawGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/DrawGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="396">
+              <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -136,8 +32,8 @@
       <file leaf-file-name="ShortRoute.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/ShortRoute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="330">
+              <caret line="304" column="12" lean-forward="true" selection-start-line="304" selection-start-column="12" selection-end-line="304" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -145,12 +41,11 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>drawString</find>
+      <find>drawLine</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -165,7 +60,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/src/DirectedGraph.java" />
+        <option value="$PROJECT_DIR$/project/src/ShortRoute.java" />
         <option value="$PROJECT_DIR$/project/src/DirectedGraph.java" />
       </list>
     </option>
@@ -196,27 +91,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="lab3.www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3.www" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3.www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3.www" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3.www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3.www" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab3.www" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3.www" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -225,7 +109,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -234,18 +118,6 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/src" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,13 +143,13 @@
       <option name="MAIN_CLASS_NAME" value="ShortRoute" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/project/src" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="lab3.www" />
+      <module name="project" />
       <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -368,17 +240,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d010524a-a9f5-4e70-b36d-0f2d536e258b" name="Default" comment="" />
-      <created>1545225567395</created>
+      <changelist id="6b98e0ab-43e2-4351-ae4b-24ca29b6f000" name="Default" comment="" />
+      <created>1545310717479</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1545225567395</updated>
-      <workItem from="1545225568727" duration="8146000" />
+      <updated>1545310717479</updated>
+      <workItem from="1545310718878" duration="375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8146000" />
+    <option name="totallyTimeSpent" value="375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1920" height="1051" extended-state="6" />
@@ -386,31 +258,31 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -425,22 +297,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/src/NodeTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/src/DirectedGraph.shell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/DrawGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -451,179 +307,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/ShortRoute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/NodeObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/PriorityQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="192" column="19" lean-forward="false" selection-start-line="192" selection-start-column="19" selection-end-line="192" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/Double.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="153" column="22" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
-          <folding>
-            <marker date="1539800322000" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539800322000" expanded="false" signature="1009:1020" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="1068:1074" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="1126:2075" ph="{...}" />
-            <marker date="1539800322000" expanded="true" signature="2152:2205" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="2252:2263" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="2287:2293" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="2374:2431" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="2477:2488" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="2508:2514" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="2566:2631" ph="{...}" />
-            <marker date="1539800322000" expanded="true" signature="2681:2746" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="2778:2789" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="2807:2813" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="2875:2922" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="2950:2961" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="2986:2992" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3025:3036" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3066:3072" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3102:3113" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3141:3147" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3176:3187" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3218:3224" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3255:3266" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3298:3304" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3331:3342" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3365:3371" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3400:3411" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3435:3441" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3472:3483" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3508:3514" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3547:3558" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3576:3582" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="3609:3620" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="3648:3654" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="3700:3793" ph="{...}" />
-            <marker date="1539800322000" expanded="true" signature="3834:3954" ph="{...}" />
-            <marker date="1539800322000" expanded="true" signature="4009:4241" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="4407:4418" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="4457:4463" ph=" }" />
-            <marker date="1539800322000" expanded="true" signature="4521:4819" ph="{...}" />
-            <marker date="1539800322000" expanded="false" signature="4875:4886" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="4905:4911" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="4967:4978" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="5006:5012" ph=" }" />
-            <marker date="1539800322000" expanded="false" signature="5068:5079" ph=" { " />
-            <marker date="1539800322000" expanded="false" signature="5107:5113" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/BusEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="304" column="12" lean-forward="true" selection-start-line="304" selection-start-column="12" selection-end-line="304" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="106" column="21" lean-forward="true" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
-          <folding>
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>lab3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

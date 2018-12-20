@@ -3,17 +3,17 @@ import java.util.*;
 
 public class DirectedGraph<E extends Edge> {
 
-    private List<List<E>> edges;
+    private List<List<E>> paths;
 
     public DirectedGraph(int noOfNodes) {
-        edges = new ArrayList<>(noOfNodes);
+        paths = new ArrayList<>(noOfNodes);
         for (int i = 0; i < noOfNodes; i++) {
-            edges.add(new ArrayList<>());
+            paths.add(new ArrayList<>());
         }
     }
 
     public void addEdge(E e) {
-        edges.get(e.getSource()).add(e);
+        paths.get(e.getSource()).add(e);
     }
 
     private class CompDijkstraPath implements Comparable<CompDijkstraPath> {
@@ -63,23 +63,25 @@ public class DirectedGraph<E extends Edge> {
      */
     public Iterator<E> shortestPath(int from, int to) {
         PriorityQueue<CompDijkstraPath> paths = new PriorityQueue<>();
-        List <Integer> visited = new ArrayList<>();
         paths.add(new CompDijkstraPath(from,0,new ArrayList<>()));
+
+        List<Integer> visited = new ArrayList<>();
+
         while (!paths.isEmpty()) {
+
             CompDijkstraPath currentElement = paths.poll();
             int node = currentElement.current;
+
             if (!visited.contains(node)) {
                 if (node == to)
                     return currentElement.path.iterator();
-                else {
-                    visited.add(node);
-                    for (E edge : edges.get(node)) {
-                        if (!visited.contains(edge.getDest())) {
-                            List<E> eList = new ArrayList<>();
-                            eList.add(edge);
-                            paths.add(new CompDijkstraPath(edge.getDest(), currentElement.cost+edge.getWeight(),eList));
-                        }
 
+                visited.add(node);
+                for (E edge : this.paths.get(node)) {
+                    if (!visited.contains(edge.getDest())) {
+                        List<E> eList = new ArrayList<>();
+                        eList.add(edge);
+                        paths.add(new CompDijkstraPath(edge.getDest(), currentElement.cost+edge.getWeight(),eList));
                     }
 
                 }
@@ -91,24 +93,40 @@ public class DirectedGraph<E extends Edge> {
     public Iterator<E> minimumSpanningTree() {
         List<List<CompKruskalEdge>> cc = new ArrayList<>();
         PriorityQueue<CompKruskalEdge> pq = new PriorityQueue<>();
-        for (List<E> edge : edges) {
-            for (E path : edge) {
-                pq.add(new CompKruskalEdge(path.from, path.to, path.getWeight()));
+
+        for (List<E> path : paths) {
+            for (E edge : path) {
+                pq.add(new CompKruskalEdge(edge.from, edge.to, edge.getWeight()));
             }
         }
+
         while (!pq.isEmpty() && cc.size() > 1) {
             CompKruskalEdge e = pq.poll();
             List<CompKruskalEdge> from = cc.get(e.from);
             List<CompKruskalEdge> to = cc.get(e.to);
             if (from != to) {
                 if (from.size() > to.size()) {
-                    for (CompKruskalEdge edge : to) {
-                        from.add(edge);
-                    }
+                    from.addAll(to);
+                    replaceOldReferences(cc,to,from);
+                    from.add(e);
+                } else {
+                    to.addAll(from);
+                    replaceOldReferences(cc,from,to);
+                    to.add(e);
                 }
             }
         }
         return null;
+    }
+
+    private void replaceOldReferences(List<List<CompKruskalEdge>> cc,
+                                      List<CompKruskalEdge> oldList,
+                                      List<CompKruskalEdge> newList) {
+        for (int i = 0; i < cc.size(); i++) {
+            if (oldList.equals(cc.get(i))) {
+                cc.set(i,newList);
+            }
+        }
     }
 
 }

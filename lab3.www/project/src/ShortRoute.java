@@ -300,7 +300,6 @@ public class ShortRoute extends JFrame implements ActionListener {
 					xco += 11;
 					hpl = "   / Torp";
 				}
-				karta.drawString(hpl, xco, yco,DrawGraph.Layer.BASE); 
 			}
 			indata.close();
 			
@@ -324,6 +323,8 @@ public class ShortRoute extends JFrame implements ActionListener {
 					// Draw
 					BusStop busFrom = noderna.find(from);
 					BusStop busTo   = noderna.find(to);
+					karta.drawString(busFrom.name + ";" + from, busFrom.xpos, busFrom.ypos,DrawGraph.Layer.BASE);
+
 					karta.drawLine(busFrom.xpos, busFrom.ypos, 
 								   busTo.xpos, busTo.ypos, color, 2.0f, DrawGraph.Layer.BASE);
 					from = to;
@@ -369,7 +370,7 @@ public class ShortRoute extends JFrame implements ActionListener {
 					xco += 11;
 					hpl = "   / Torp";
 				}
-				karta.drawString(hpl, xco, yco,DrawGraph.Layer.BASE); 
+				karta.drawString(hpl, xco, yco,DrawGraph.Layer.BASE);
 			}
 			indata.close();
 			
