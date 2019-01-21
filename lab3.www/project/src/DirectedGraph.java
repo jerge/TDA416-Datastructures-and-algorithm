@@ -47,6 +47,12 @@ public class DirectedGraph<E extends Edge> {
             this.weight = weight;
         }
 
+        /**
+         * Compares which of the queue elements that have the lowest weight
+         * @param comp the element to compare to
+         * @return 0 if they have equal weight, 1 if the other path (qe) has the smallest weight,
+         * -1 if the current path has the smallest weight
+         */
         @Override
         public int compareTo(CompKruskalEdge comp) {
             return Double.compare(weight, comp.weight);
@@ -56,31 +62,31 @@ public class DirectedGraph<E extends Edge> {
 
 
     /**
-     *
+     * Calculates the shortest path between two nodes
      * @param from node number of the start node
      * @param to node number of the finish node
-     * @return null
+     * @return An iterator containing all edges that makes up the desired paths between the nodes
      */
     public Iterator<E> shortestPath(int from, int to) {
         PriorityQueue<CompDijkstraPath> dijkstraPaths = new PriorityQueue<>();
-        dijkstraPaths.add(new CompDijkstraPath(from,0,new ArrayList<>()));
+        dijkstraPaths.add(new CompDijkstraPath(from,0,new ArrayList<>())); // Adds the initial node to the queue
 
-        List<Integer> visited = new ArrayList<>();
+        List<Integer> visited = new ArrayList<>(); // A list to know if you've visited the node before
 
-        while (!dijkstraPaths.isEmpty()) {
+        while (!dijkstraPaths.isEmpty()) { // While the queue is not empty
 
-            CompDijkstraPath currentElement = dijkstraPaths.poll();
+            CompDijkstraPath currentElement = dijkstraPaths.poll(); // Retrieves the first element of the queue
             int node = currentElement.current;
 
-            if (!visited.contains(node)) {
-                if (node == to)
-                    return currentElement.path.iterator();
+            if (!visited.contains(node)) { // If the node is not visited
+                if (node == to) // If the node is the end point
+                    return currentElement.path.iterator(); // Return the path
 
-                visited.add(node);
-                for (E edge : this.paths.get(node)) {
-                    if (!visited.contains(edge.getDest())) {
+                visited.add(node); // Count the node as visited
+                for (E edge : this.paths.get(node)) { // for every edge on EL(node)
+                    if (!visited.contains(edge.getDest())) { // If edge is not visited
                         List<E> eList = new ArrayList<>(currentElement.path);
-                        eList.add(edge);
+                        eList.add(edge); // Add new queue Element
                         dijkstraPaths.add(new CompDijkstraPath(edge.getDest(), currentElement.cost+edge.getWeight(),eList));
                     }
 
@@ -90,43 +96,55 @@ public class DirectedGraph<E extends Edge> {
         return null;
     }
 
+    /**
+     * Calculates the list containing edges that connects all nodes with minimum cost,
+     * using Kruscal's algorithm
+     * @return The iterator containing the edges ^
+     */
     public Iterator<E> minimumSpanningTree() {
-        List<List<CompKruskalEdge>> cc = new ArrayList<>();
+        List <List<E>> cc = new ArrayList<>();
         PriorityQueue<CompKruskalEdge> pq = new PriorityQueue<>();
 
-        for (List<E> path : paths) {
+        for(List<E> path : paths) { //Adds all edges to a priority queue
             for (E edge : path) {
-                pq.add(new CompKruskalEdge(edge.from, edge.to, edge.getWeight()));
+                pq.add(new CompKruskalEdge(edge.getSource(), edge.getDest(), edge.getWeight()));
             }
+            cc.add(new ArrayList<>());  //Every node contains an empty list
         }
-
-        while (!pq.isEmpty() && cc.size() > 1) {
-            CompKruskalEdge e = pq.poll();
-            List<CompKruskalEdge> from = cc.get(e.from);
-            List<CompKruskalEdge> to = cc.get(e.to);
-            if (from != to) {
-                if (from.size() > to.size()) {
-                    from.addAll(to);
-                    replaceOldReferences(cc,to,from);
-                    from.add(e);
-                } else {
-                    to.addAll(from);
-                    replaceOldReferences(cc,from,to);
-                    to.add(e);
+        int ccSize = cc.size(); // |cc|
+        while(!pq.isEmpty() && ccSize > 1){ // pq not empty and |cc| > 1
+            CompKruskalEdge e = pq.poll(); // Retrieves e from queue
+            List<E> from = cc.get(e.from);
+            List<E> to = cc.get(e.to);
+            if(from != to){     //If from and to doesn't refer to the same list in cc
+                if(from.size() > to.size()){ // Selects the smallest list
+                    from.addAll(to); // Moves all elements from the smaller to the larger list
+                    replaceOldReferences(to, from, cc); // Makes sure all relevant nodes refer to the new list
+                    from.add((E) e); // Finally adds e to the filled list
+                } else { // Selects the smallest list
+                    to.addAll(from); // Moves all elements from the smaller to the larger list
+                    replaceOldReferences(from, to, cc); // Makes sure all relevant nodes refer to the new list
+                    to.add((E) e); // Finally adds e to the filled list
                 }
+                ccSize--;
             }
         }
-        return null;
+        return cc.get(0).iterator();
     }
 
-    private void replaceOldReferences(List<List<CompKruskalEdge>> cc,
-                                      List<CompKruskalEdge> oldList,
-                                      List<CompKruskalEdge> newList) {
-        for (int i = 0; i < cc.size(); i++) {
-            if (oldList.equals(cc.get(i))) {
-                cc.set(i,newList);
+    /**
+     * Redirects the pointers in a list of lists pointing at the old list to point at the new list
+     * @param oldList The old list
+     * @param newList The new list
+     * @param cc The list of lists
+     */
+    private void replaceOldReferences(List<E> oldList, List<E> newList, List<List<E>> cc) {
+        for(int i = 0; i < cc.size() ; i++){
+            if(cc.get(i) == oldList){
+                cc.set(i, newList);
             }
         }
     }
+
 
 }
